@@ -1,0 +1,44 @@
+
+.buzz {
+    color: #3d88ce;
+}
+
+.icon {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1em 1em;
+}
+
+.power-marker {
+    background-image: url("https://twemoji.maxcdn.com/2/svg/2a-20e3.svg");
+}
+
+.buzz-marker {
+    background-image: url("https://twemoji.maxcdn.com/2/svg/1f514.svg");
+}
+
+.search-db {
+    filter: invert(15%) sepia(43%) saturate(11%) hue-rotate(327deg) brightness(113%) contrast(94%);
+    height: 24px;
+}
+
+.search-db:hover {
+    filter: opacity(50%);
+}
+
+.expander {
+    display: block;
+    color: black;
+}
+
+.qHistory { margin-top: 1rem; }
+
+.list-group-item { word-break: break-all; }
+
+.card-header, .card-body, .card-footer { background-color: #e9ecef; }
+.card-footer { margin-bottom: 0; }

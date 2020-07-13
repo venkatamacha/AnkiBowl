@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <title>AnkiBowl</title>
+    </head>
+    <body style="background: white">
+        <div class="container">
+            <p class="lead"></p>
+            <div id="jumbotron" class="text-center" style="margin-top: 3rem; margin-bottom: 3rem;">
+                <h1>Welcome to AnkiBowl!</h1>
+                <p class="lead">An online platform to compete in medical school trivia :)</p>
+            </div>
+            <div class="container">
+                <form onsubmit="goToRoom(); return false">
+                    <div class="form-group">
+                        <label for="roomName">Join or create a room:</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="roomName" placeholder="hsquizbowl" />
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary" onclick="goToRoom()">Go</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <hr>
+
+                <p>Public Rooms:</p>
+
+                <ul class="list-group" id="roomList"></ul>
+                <footer class="footer fixed-bottom" style="padding-bottom: 1%">
+                    <div class="container text-center">
+                        <span class="text-muted">Learn more about AnkiBowl on <a href="google.com">GitHub</a>.</span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!--Scripts at the end-->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="home/main.js"></script>
+    </body>
+</html>
