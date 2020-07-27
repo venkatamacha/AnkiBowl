@@ -53,11 +53,15 @@ class Checker {
                 bestMatch = n.rating;
         });
 
+        console.log(user)
+        console.log(real)
+
         // if any word in the player's guess
         // is 60% similar to any word in answer,
         // return 2 (CORRECT); if 40%, return 1 (PROMPT);
         // if less than that, return 0 (INCORRECT)
         if (bestMatch >= 0.6) return 2;
+        else if ((user.length >= 3) && ((real.toLowerCase()).includes(user.toLowerCase()))) return 2; // this is a custom change for smartCheck
         else if (bestMatch >= 0.4) return 1;
         else return 0;
 

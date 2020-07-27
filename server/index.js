@@ -83,7 +83,7 @@ function roomInfo(n) {
     return {
         name: n.getName(),
         players: n.users.players.length,
-        categories: "Good Quizbowl"
+        categories: "USMLE Step 1"
     }
 }
 

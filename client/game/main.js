@@ -172,9 +172,9 @@ socket.on("syncSettings", data => {
 
 });
 
-socket.on("loading", () => {
-    $("#question").text(`Loading questions... (This may take a while as questions are being requested from QuizDB. This will be considerably faster in a later update.)`);
-});
+// socket.on("loading", () => {
+//     $("#question").text(`Loading questions... (This may take a while as questions are being requested from QuizDB. This will be considerably faster in a later update.)`);
+// });
 
 socket.on("loaded", () => {
     $("#question").html("Questions loaded! Press <code>n</code> to start reading questions.");

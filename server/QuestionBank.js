@@ -1,5 +1,5 @@
 const axios = require("axios");
-const q_set = require("../data/nats_prep.json");
+const q_set = require("../data/all_decks.json");
 
 class QuestionBank {
 
@@ -14,7 +14,8 @@ class QuestionBank {
         const qData = this.questions[Math.floor(Math.random() * this.questions.length)];
 
         // gather question information for selected question
-        let qInfo = [qData.tournament.difficulty, qData.tournament.name, qData.category.name, qData.subcategory.name];
+        // let qInfo = [qData.tournament.difficulty, qData.tournament.name, qData.category.name, qData.subcategory.name];
+        let qInfo = [qData.tournament.difficulty];
 
         // if any question info was null, mark "Not specified"
         qInfo = qInfo.map(n => {
@@ -72,20 +73,26 @@ class QuestionBank {
 
             console.log("Loading questions...");
 
-            // send request to QuizDB and wait for response
-            // if successful, return # of questions as confirmation
-            axios.get(url).then(rs => {
-                this.questions = rs.data.data.tossups;
-                resolve(this.questions.length);
-            })
-            // If QuizDB is offline, load questions saved under "/data" folder
-            .catch(() => {
-                console.log("Connection to QuizDB failed!");
-                console.log("Loading local question set...");
+            // // send request to QuizDB and wait for response
+            // // if successful, return # of questions as confirmation
+            // axios.get(url).then(rs => {
+            //     this.questions = q_set.data.tossups;
+            //     resolve(this.questions.length);
+            //     // this.questions = rs.data.data.tossups;
+            //     // resolve(this.questions.length);
+            // })
+            // // If QuizDB is offline, load questions saved under "/data" folder
+            // .catch(() => {
+            //     console.log("Connection to QuizDB failed!");
+            //     console.log("Loading local question set...");
 
-                this.questions = q_set.data.tossups;
-                resolve(this.questions.length);
-            });
+            //     this.questions = q_set.data.tossups;
+            //     resolve(this.questions.length);
+            // })
+            // ;
+
+            this.questions = q_set.data.tossups;
+            resolve(this.questions.length);
     
         });
 
