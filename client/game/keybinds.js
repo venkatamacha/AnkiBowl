@@ -25,7 +25,7 @@ window.addEventListener("keydown", e => {
         // CHAT
         case "Enter":
             e.preventDefault();
-            if (!$("#answerInput").is(":visible")) openChat();
+            if (!$("#answerInput").is(":visible")) buzz();
             break;
 
         // NEXT/SKIP
