@@ -10,16 +10,16 @@
     <body class="bodyid">
         <div class="container">
             <p class="lead"></p>
-            <div id="jumbotron" class="text-center" style="margin-top: 3rem; margin-bottom: 3rem;">
-                <h1 >Welcome to AnkiBowl!</h1>
-                <p class="lead">An online platform for competing in medical school trivia.</p>
+            <div id="jumbotron" class="text-center" style="margin-top: 3.75rem; margin-bottom: 3.75rem;">
+                <h1 style="font-size: 2.5em;">Welcome to <strong>AnkiBowl</strong>!</h1>
+                <p class="lead" style="font-size: 125%;">An online platform for competing in medical school trivia.</p>
             </div>
             <div class="container">
                 <form onsubmit="goToRoom(); return false">
                     <div class="form-group">
                         <label for="roomName">Join or create a room:</label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="roomName" placeholder="Please type in a room name!" />
+                            <input type="text" class="form-control" id="roomName" style = "height: calc((1.5em + .75rem + 2px)* 1.25); font-size: 100%;" placeholder="Please type in a room name!">
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-primary" onclick="goToRoom()">Go</button>
                             </div>
@@ -34,7 +34,7 @@
                 <ul class="list-group" id="roomList"></ul>
                 <footer class="footer fixed-bottom" style="padding-bottom: 1%">
                     <div class="container text-center">
-                        <span  style="color: #ffffffe0;">Learn more about AnkiBowl on <a href="https://github.com/venkatamacha/AnkiBowl">GitHub</a>.</span>
+                        <span  style="color: #ffffffe0;">Learn more about <strong>AnkiBowl</strong> on <a href="https://github.com/venkatamacha/AnkiBowl">GitHub</a>.</span>
                     </div>
                 </footer>
             </div>
