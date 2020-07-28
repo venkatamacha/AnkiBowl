@@ -24,6 +24,62 @@
   text-align: center;*/
 /*}*/
 
+.table {
+	text-shadow: none;
+	box-shadow:none;
+}
+
+.list-group-item {
+	color: #000000eb;
+	text-shadow: none;
+	box-shadow:none;
+}
+
+.modal-title {
+	color: #000000eb;
+	text-shadow: none;
+	box-shadow:none;
+}
+
+.list-group-item {
+	color: #000000de;
+	text-shadow: none;
+	box-shadow:none;"
+}
+
+#answer {
+	color: #000000eb;
+	text-shadow: none;
+	box-shadow:none;
+	font-weight: 550;
+}
+
+#question {
+	color: #000000eb;
+	text-shadow: none;
+	box-shadow:none;
+}
+
+.card-header {
+	color: #000000eb;
+	text-shadow: none;
+	box-shadow:none;
+	font-weight: 550;
+}
+
+.card-text {
+	color: #000000eb;
+	text-shadow: none;
+	box-shadow:none;
+}
+
+.breadcrumb-item {
+	color: #5a6773;
+	text-shadow: none;
+	box-shadow:none;	
+}
+
+
 html,
 body {
   height: 100%;
@@ -38,7 +94,7 @@ body {
   background: url("../public/lighthouse-1532771.jpg");
   background-size: 2500.0px;
   background-repeat: no-repeat;	
-  filter: brightness(0.6);
+  filter: brightness(0.5);
   position: fixed;
   top: 50%; 
   left: 50%;
@@ -64,4 +120,7 @@ body {
   color: #fff;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+
+/*  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);*/
 }

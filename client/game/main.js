@@ -37,7 +37,8 @@ socket.on("questionUpdate", data => {
     gameStarted = true;
 
     // display emoji for power marker
-    const word = data.replace("(*)", "<span class='icon power-marker'></span>");
+    // const word = data.replace("(*)", "<span class='icon power-marker'></span>");
+    const word = data.replace("BLANK", "<b>BLANK</b>");
 
     // add word to question
     $("#question").append(word);
@@ -220,7 +221,7 @@ socket.on("sendScoreboard", data => {
         const disabled = !n.connected ? "disabled" : "";
 
         $("#scores").append(`
-        <li class="list-group-item d-flex justify-content-between align-items-center ${disabled}">
+        <li class="list-group-item d-flex justify-content-between align-items-center ${disabled}"  style="color: #000000eb; text-shadow: none; box-shadow:none;">
             ${escapeHTML(n.name)}
             <span class="badge badge-secondary badge-pill">${n.stats.score}</span>
         </li>`);
@@ -239,7 +240,7 @@ socket.on("sendScoreboard", data => {
 
     // add "more stats" button
     $("#scores").append(`
-        <button class="list-group-item list-group-item-action" data-toggle="modal" data-target="#stats">
+        <button class="list-group-item list-group-item-action" data-toggle="modal" data-target="#stats"  style="color: #000000eb; text-shadow: none; box-shadow:none;">
             More stats...
         </button>
     `);
