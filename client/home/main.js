@@ -18,7 +18,7 @@ function listRooms() {
         });
 
         if (res.data.length === 0)
-            roomList.innerHTML = "<li class='list-group-item list-group-item-light' style='color: #000000eb; text-shadow: none; box-shadow:none;'>No public rooms right now :(</li>";
+            roomList.innerHTML = "<li class='list-group-item list-group-item-light' style='color: #000000eb; text-shadow: none; box-shadow:none;'>No public rooms right now.</li>";
 
     })
     .catch(err => console.error("Error fetching room list: " + err));
