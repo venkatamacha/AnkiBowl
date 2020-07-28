@@ -12,6 +12,7 @@ const rooms = [];
 // static directories
 app.use("/game", express.static("client/game"));
 app.use("/home", express.static("client/home"));
+app.use("/public", express.static("client/public"));
 
 // API endpoint for home.html to get room info
 app.get("/api/fetchRooms", (req, res) => {
