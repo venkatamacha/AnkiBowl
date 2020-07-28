@@ -16,6 +16,11 @@ window.addEventListener("keydown", e => {
 
     switch (e.key) {
 
+        case "Tab":
+            e.preventDefault();
+            if (!$("#answerInput").is(":visible")) openChat();
+            break;
+
         // BUZZ
         case " ":
             e.preventDefault();
