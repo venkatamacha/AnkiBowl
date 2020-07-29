@@ -45,6 +45,11 @@
   src: url("../public/B612-Regular.ttf");
 }
 
+#warnPing {
+  text-shadow: none;
+  box-shadow: none;  
+}
+
 .table {
 	text-shadow: none;
 	box-shadow:none;
