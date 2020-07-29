@@ -294,7 +294,7 @@ socket.on("netRes", () => {
 
     // if ping to server is greater than 250ms,
     // warn the user that their connection is poor
-    if (avgPing >= 200) { // used to be 250
+    if (avgPing >= 250) {
         console.warn("High latency detected.");
         $("#warnPing").text(`High latency detected (${ms}ms). Try refreshing the page or connecting to a faster network.`);
         $("#warnPing").show();
