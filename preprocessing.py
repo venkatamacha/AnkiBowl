@@ -93,6 +93,8 @@ with open('/Users/venkatamacha/Documents/GitHub/AnkiBowl/data/nats_prep.json') a
 # data["tossups"] = []
 
 data["data"]["tossups"] = []
+data["engines"] = { "node" : ">=0.12" }
+
 tossups = []
 
 for i in range(len(texts)):

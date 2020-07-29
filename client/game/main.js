@@ -255,11 +255,12 @@ This is done every 0.1 seconds (10-tick server).
 socket.on("tick", data => {
 
     console.log(data.time);
+    var datatime2 = Math.round(data.time)
 
     // update the progress bar's length
     $("#timer").show();
     $(".progress").show();
-    $(".progress-bar").prop("style", `width: ${(7-data.time)/7*100}%`);
+    $(".progress-bar").prop("style", `width: ${(7-datatime2)/7*100}%`);
 
     // change timer color to blue if question is "dead"
     if (data.type === "dead") {
@@ -269,8 +270,15 @@ socket.on("tick", data => {
     }
     
     // display time to the nearest 1/10 of a second
-    $("#timer").text(data.time.toFixed(1));
-
+    if (Math.abs(datatime2 - 1) < 0.001) {
+        $("#timer").text(datatime2.toFixed(0).concat(" seconds..."));
+    } else {
+        if (Math.abs(datatime2) > 3) {
+            $("#timer").text(datatime2.toFixed(0).concat(" seconds..."));
+        } else {
+            $("#timer").text(datatime2.toFixed(0).concat(" seconds..."));
+        }   
+    }
 });
 
 // utility callback for the server to check client ping
@@ -287,12 +295,12 @@ socket.on("netRes", () => {
     // if ping to server is greater than 250ms,
     // warn the user that their connection is poor
     if (avgPing >= 250) {
-        console.warn("High latency detected.");
-        $("#warnPing").text(`High latency detected (${ms}ms). Try refreshing the page or connecting to a faster network.`);
-        $("#warnPing").show();
+        // console.warn("High latency detected.");
+        // $("#warnPing").text(`High latency detected (${ms}ms). Try refreshing the page or connecting to a faster network.`);
+        // $("#warnPing").show();
     }
     else {
-        $("#warnPing").hide();
+        // $("#warnPing").hide();
     }
 
 });
