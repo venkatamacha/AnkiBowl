@@ -23,7 +23,8 @@ class Room {
             canSkip     : true,
             canPause    : true,
             canMultiBuzz: true,
-            speed       : 500
+            speed       : 125
+            // speed       : 500
         }
 
         // QuizDB query object
