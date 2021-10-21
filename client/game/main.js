@@ -42,7 +42,7 @@ socket.on("questionUpdate", data => {
 
     // add word to question
     $("#question").append(word);
-    $("#nextBtn").text("Next");
+    // $("#nextBtn").text("Next");
 });
 
 socket.on("clearQuestion", data => {
@@ -60,7 +60,7 @@ socket.on("clearQuestion", data => {
             <div class="card-header container-fluid">
                 <div class="row">
                     <div class="col-11">
-                        <a class="expander" data-toggle="collapse" href=".q${histIndex}">${$("#answer").html()}</a>
+                        <b><a class="expander" data-toggle="collapse" href=".q${histIndex}">${$("#answer").html()}</a></b>
                     </div>
                     <div class="col-1">
                         <img id="search-q${histIndex}" class="search-db float-right" onclick="searchQuizDB(${histIndex})" src="game/db.svg" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Search answerline on QuizDB" />
@@ -131,6 +131,7 @@ socket.on("revealAnswer", data => {
     $("#answer").show();
     $("#q_info").show();
     $("#answer").html(data.answer);
+    $("#answer").css('font-weight', 'bold');
 
     data.info.forEach(n => $("#q_info").append(`<li class="breadcrumb-item">${n}</li>`));
 });
